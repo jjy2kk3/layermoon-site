@@ -1,6 +1,6 @@
 {
-  "name": "layermoon-site",
-  "version": "0.1.1",
+  "name": "layermoon-admin",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,6 +12,7 @@
     "next": "14.2.8",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "@supabase/supabase-js": "2.45.3",
     "framer-motion": "11.2.10",
     "lucide-react": "0.453.0",
     "jsbarcode": "3.11.6",
