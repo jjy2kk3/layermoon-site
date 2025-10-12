@@ -22,7 +22,9 @@ function Gate({ onOk }:{ onOk: (code:string)=>void }){
     <div className="min-h-[60vh] grid place-items-center">
       <Card className="w-full max-w-sm">
         <CardHeader><CardTitle>Admin Access</CardTitle><CardDescription>输入访问码进入后台</CardDescription></CardHeader>
-        <CardContent><Input type="password" placeholder="Access code" value={code} onChange={e=>setCode((e.target as any).value)} /></CardContent>
+        <CardContent><Input type="password" placeholder="Access code" value={code}
+  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCode(e.target.value)} />
+</CardContent>
         <CardFooter><Button className="w-full" onClick={()=>onOk(code)}><LogIn className="w-4 h-4 mr-2"/> 进入</Button></CardFooter>
       </Card>
     </div>
