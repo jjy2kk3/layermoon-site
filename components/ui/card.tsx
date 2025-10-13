@@ -1,6 +1,1 @@
-export function Card({ className="", ...props }: any){ return <div className={`bg-white border rounded-2xl ${className}`} {...props}/>; }
-export function CardHeader({ className="", ...props }: any){ return <div className={`p-4 ${className}`} {...props}/>; }
-export function CardTitle({ className="", ...props }: any){ return <h3 className={`text-lg font-semibold ${className}`} {...props}/>; }
-export function CardDescription({ className="", ...props }: any){ return <p className={`text-sm text-neutral-600 ${className}`} {...props}/>; }
-export function CardContent({ className="", ...props }: any){ return <div className={`p-4 pt-0 ${className}`} {...props}/>; }
-export function CardFooter({ className="", ...props }: any){ return <div className={`p-4 pt-0 ${className}`} {...props}/>; }
+export function Card(p:any){return <div className={`bg-white border rounded-2xl ${p.className||''}`} {...p}/>}; export function CardHeader(p:any){return <div className={`p-4 ${p.className||''}`} {...p}/>}; export function CardTitle(p:any){return <h3 className={`text-lg font-semibold ${p.className||''}`} {...p}/>}; export function CardDescription(p:any){return <p className={`text-sm text-neutral-600 ${p.className||''}`} {...p}/>}; export function CardContent(p:any){return <div className={`p-4 pt-0 ${p.className||''}`} {...p}/>}; export function CardFooter(p:any){return <div className={`p-4 pt-0 ${p.className||''}`} {...p}/>};
