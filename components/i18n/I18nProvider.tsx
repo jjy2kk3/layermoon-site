@@ -3,7 +3,9 @@ import * as React from "react";
 type Lang = "en" | "zh";
 type Dict = Record<string, { en: string; zh: string }>;
 const dict: Dict = {
+  nav_services: { en: "Services", zh: "服务" },
   nav_portfolio: { en: "Portfolio", zh: "案例展示" },
+  nav_catalog:  { en: "Catalog",  zh: "目录" },
   nav_contact:   { en: "Contact",   zh: "联系我们" },
   lang_en:       { en: "EN",        zh: "英" },
   lang_zh:       { en: "中文",       zh: "中" },
