@@ -3,7 +3,7 @@ import { getAdminClient, isAllowed } from "@/lib/supabaseAdmin";
 
 export async function GET(){
   const supa = getAdminClient();
-  if (!supa) return NextResponse.json({ items: [] }); // fallback empty
+  if (!supa) return NextResponse.json({ items: [] });
   const { data, error } = await supa.from("items").select("*").order("created_at",{ascending:false});
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   return NextResponse.json({ items: data });
