@@ -14,12 +14,11 @@ export default function Logo({ className = "" }: { className?: string }) {
         </span>
       </div>
 
-      {/* 文字区：Layer Moon + Home Staging */}
+      {/* 右侧文字 */}
       <div className="flex flex-col leading-none">
         <span className="font-semibold text-[18px] tracking-tight">
           Layer Moon
         </span>
-        {/* 注意：向右 +2px，向下 +2px */}
         <span className="text-[12px] text-neutral-500 relative top-[2px] ml-[2px]">
           Home&nbsp;Staging
         </span>
