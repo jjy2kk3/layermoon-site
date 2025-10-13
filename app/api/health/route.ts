@@ -1,1 +1,9 @@
-import { NextResponse } from 'next/server'; export async function GET(){ return NextResponse.json({ ok: !!(process.env.SUPABASE_URL&&process.env.SUPABASE_SERVICE_ROLE_KEY), hasUrl:!!process.env.SUPABASE_URL, hasKey:!!process.env.SUPABASE_SERVICE_ROLE_KEY, adminCodeSet: !!(process.env.ADMIN_ACCESS_CODE||'lj861201') }); }
+import { NextResponse } from "next/server";
+export async function GET(){
+  return NextResponse.json({
+    ok: !!(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY),
+    hasUrl: !!process.env.SUPABASE_URL,
+    hasKey: !!process.env.SUPABASE_SERVICE_ROLE_KEY,
+    adminCodeSet: !!(process.env.ADMIN_ACCESS_CODE || 'lj861201')
+  });
+}
