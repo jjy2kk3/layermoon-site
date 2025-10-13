@@ -1,6 +1,6 @@
 {
-  "name": "layermoon-admin",
-  "version": "0.3.0",
+  "name": "layermoon-full",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
