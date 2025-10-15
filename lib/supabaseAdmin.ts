@@ -1,4 +1,5 @@
-import { createClient } from "@supabase/supabase-js";
+
+import { createClient } from '@supabase/supabase-js';
 export function getAdminClient(){
   const url = process.env.SUPABASE_URL as string | undefined;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY as string | undefined;
@@ -6,6 +7,6 @@ export function getAdminClient(){
   return createClient(url, key, { auth: { persistSession: false } });
 }
 export function isAllowed(code: string | null){
-  const expected = process.env.ADMIN_ACCESS_CODE || "lj861201";
+  const expected = process.env.ADMIN_ACCESS_CODE || 'lj861201';
   return !!(code && code === expected);
 }
