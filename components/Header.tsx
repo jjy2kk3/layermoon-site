@@ -16,6 +16,7 @@ export default function Header(){
           <Link href="/#portfolio" className="opacity-80 hover:opacity-100">{t('nav_portfolio')}</Link>
           <Link href="/#catalog" className="opacity-80 hover:opacity-100">{t('nav_catalog')}</Link>
           <Link href="/#contact" className="opacity-80 hover:opacity-100">{t('nav_contact')}</Link>
+          <Link href="/admin" className="opacity-60 hover:opacity-100">{t('nav_admin')}</Link>
         </nav>
         <div className="ml-auto flex items-center gap-3 text-sm">
           <a className="hidden sm:flex items-center gap-2 opacity-80 hover:opacity-100" href="tel:+12065550123">

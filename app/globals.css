@@ -2,3 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 body{@apply bg-white text-neutral-900}
+img{max-width:100%;height:auto}

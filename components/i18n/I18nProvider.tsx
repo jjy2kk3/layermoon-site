@@ -8,6 +8,7 @@ const dict:Dict={
   nav_portfolio:{en:'Portfolio',zh:'案例展示'},
   nav_catalog:{en:'Catalog',zh:'产品目录'},
   nav_contact:{en:'Contact',zh:'联系我们'},
+  nav_admin:{en:'Admin',zh:'后台'},
   lang_en:{en:'EN',zh:'英'}, lang_zh:{en:'中文',zh:'中'},
   hero_title:{en:'Stage faster. Sell better.',zh:'更快布置，更好成交。'},
   hero_sub:{en:'Greater Seattle home staging—vacant, partial, Airbnb. Furniture + styling rentals.',zh:'西雅图地区家居陈设——空房、部分房、短租；家具与软装租赁。'},
@@ -22,7 +23,7 @@ const dict:Dict={
 type Ctx={lang:Lang; t:(k: keyof typeof dict)=>string; setLang:(l:Lang)=>void;};
 export const I18nContext=React.createContext<Ctx|null>(null);
 export default function I18nProvider({children}:{children:React.ReactNode}){
-  const [lang,setLang]=React.useState<Lang>('en');
+  const [lang,setLang]=React.useState<Lang>('en'); // default English
   const t=React.useCallback((k: keyof typeof dict)=> dict[k]?.[lang] ?? String(k),[lang]);
   return <I18nContext.Provider value={{lang,t,setLang}}>{children}</I18nContext.Provider>;
 }
